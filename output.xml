@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230530 19:38:14.328" rpa="false" schemaversion="3">
+<suite id="s1" name="Alientest" source="C:\Test\chromedriver_win32\alientest.robot">
+<test id="s1-t1" name="elso teszt" line="35">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230530 19:38:14.582" level="FAIL">Variable '${URL}' not found.</msg>
+<status status="FAIL" starttime="20230530 19:38:14.581" endtime="20230530 19:38:14.582"/>
+</kw>
+<kw name="Maxime Browser Window">
+<status status="NOT RUN" starttime="20230530 19:38:14.586" endtime="20230530 19:38:14.586"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WELCOMETEXT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.587" endtime="20230530 19:38:14.587"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item}</var>
+<arg>${WELCOMETEXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.587" endtime="20230530 19:38:14.587"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${item}</arg>
+<arg>Welcome</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.587" endtime="20230530 19:38:14.587"/>
+</kw>
+<kw name="Register">
+<status status="NOT RUN" starttime="20230530 19:38:14.591" endtime="20230530 19:38:14.591"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://html/body/header/nav/div/div/div/ul[2]/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.591" endtime="20230530 19:38:14.591"/>
+</kw>
+<kw name="Wait Until Element Is Visible /html/body/div/main/h1">
+<arg>2s</arg>
+<status status="NOT RUN" starttime="20230530 19:38:14.594" endtime="20230530 19:38:14.594"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.595" endtime="20230530 19:38:14.595"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>register.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.595" endtime="20230530 19:38:14.595"/>
+</kw>
+<status status="FAIL" starttime="20230530 19:38:14.581" endtime="20230530 19:38:14.596">Variable '${URL}' not found.</status>
+</test>
+<test id="s1-t2" name="Verify Login" line="58">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://html/body/header/nav/div/div/div/ul[2]/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 19:38:14.601" level="INFO">Clicking element 'xpath://html/body/header/nav/div/div/div/ul[2]/li[1]/a'.</msg>
+<msg timestamp="20230530 19:38:14.602" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230530 19:38:14.602" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230530 19:38:14.601" endtime="20230530 19:38:14.604"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.605" endtime="20230530 19:38:14.605"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Use a local account to log in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.605" endtime="20230530 19:38:14.606"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="Input_Email"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.606" endtime="20230530 19:38:14.606"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath://*[@id="Input_Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.606" endtime="20230530 19:38:14.607"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGINBUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.607" endtime="20230530 19:38:14.607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://html/body/header/nav/div/div/div/ul[2]/li[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.608" endtime="20230530 19:38:14.608"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${item}</var>
+<arg>${HELLO}</arg>
+<arg>2s</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.608" endtime="20230530 19:38:14.608"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${item}</arg>
+<arg>${email}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.608" endtime="20230530 19:38:14.608"/>
+</kw>
+<status status="FAIL" starttime="20230530 19:38:14.600" endtime="20230530 19:38:14.609">No browser is open.</status>
+</test>
+<test id="s1-t3" name="Create New Aliens" line="70">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ALIENTEXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230530 19:38:14.612" level="FAIL">Variable '${ALIENTEXT}' not found.</msg>
+<status status="FAIL" starttime="20230530 19:38:14.611" endtime="20230530 19:38:14.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.612" endtime="20230530 19:38:14.613"/>
+</kw>
+<kw name="Click Element ${CREATENEW}">
+<status status="NOT RUN" starttime="20230530 19:38:14.619" endtime="20230530 19:38:14.619"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.619" endtime="20230530 19:38:14.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CREATENAME}</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.620" endtime="20230530 19:38:14.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CREATPLANET}</arg>
+<arg>${PLANET}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.621" endtime="20230530 19:38:14.621"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CREATEPOPULATION}</arg>
+<arg>${POPULATION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.621" endtime="20230530 19:38:14.621"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CREATEATTITUDE}</arg>
+<arg>${ATTITUDE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.622" endtime="20230530 19:38:14.622"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CREATECREATE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.622" endtime="20230530 19:38:14.622"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.623" endtime="20230530 19:38:14.623"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230530 19:38:14.623" endtime="20230530 19:38:14.623"/>
+</kw>
+<status status="FAIL" starttime="20230530 19:38:14.610" endtime="20230530 19:38:14.624">Variable '${ALIENTEXT}' not found.</status>
+</test>
+<status status="FAIL" starttime="20230530 19:38:14.328" endtime="20230530 19:38:14.626"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Alientest">Alientest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
